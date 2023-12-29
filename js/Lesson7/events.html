@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Events</title>
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <button onmouseover="hover()">hover</button>
+
+    <button onclick="Hello()">click</button>
+    <button onmouseover="hover()">hover</button>
+
+    <input type="text" placeholder="Input your name" name="" id="name" value="">
+    <input type="number" placeholder="Input your age" name="" id="age" value="">
+    <button onclick="onSubmit()">submit</button>
+    <p id="result"></p>
+
+    <!-- <input type="text" placeholder="input your name" name="" id="username" value=""> -->
+    
+
+    <script>
+
+       
+        // function Hello() {
+        //     alert('hello!')
+        // }
+
+        // function hover() {
+        //     alert('Hover me!')
+        // }
+
+        function onSubmit() {
+            // console.log(document.getElementById('name').value);
+            // console.log('Hello name is',document.getElementById('name').value,'!');
+            // console.log('You are ',document.getElementById('age').value,'years old now !');
+
+            var name = document.getElementById('name').value;
+            var year = document.getElementById('age').value;
+            console.log('Name: ', name, 'age: ', 2023 - year);
+            // document.getElementById('result').innerHTML = 'Name: ' + name + 'age: ' + (2023 - year);
+            document.getElementById('result').innerHTML = `Name: ${name} age: ${year}`;
+        }
+    </script>
+</body>
+
+</html>

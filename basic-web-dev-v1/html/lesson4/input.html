@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .div {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        #form {
+            position: absolute;
+            margin: 20px;
+            background-color: rgb(235, 231, 226);
+            width: auto;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+        }
+
+        h3 {
+            text-align: center;
+            font-family: 'Staatliches', cursive;
+        }
+
+        .input {
+            width: 100%;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        select {
+            width: 100%;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        textarea {
+            width: 100%;
+            border-radius: 5px;
+            padding: 40px;
+        }
+
+        .spacing {
+            margin: 20px;
+        }
+
+        .radio {
+            display: inline-block;
+            margin: 0px 5px;
+        }
+
+        .between {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 3%;
+        }
+
+        .button {
+            border: none;
+            border-radius: 5px;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            /* display: inline-block; */
+            font-size: 16px;
+            /* margin: 10px 50px 0px 0px; */
+            cursor: pointer;
+        }
+
+        .button1 {
+            background-color: #4CAF50;
+        }
+
+        .button1:hover {
+            background-color: #308633;
+        }
+
+        .button2 {
+            background-color: #008CBA;
+        }
+
+        .button2:hover {
+            background-color: #175f77;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="div">
+        <form id="form">
+            <div class="spacing">
+                <div>
+                    <img src="https://yt3.ggpht.com/OLuhaGN_2txsq-blg1AqTdsCzHw_Rv21CeGTQP2_IUEwQ-S_2ki8iguQPpY7Y9HCMSB4W6n5-ihRmJU=s640-c-fcrop64=1,00000000ffffffff-nd-v1"
+                        alt="Profile"><br>
+                    <h3>Profile Picture</h3>
+                </div><br>
+                <label for="username">Last name</label><br>
+                <!-- fullWidth  -->
+                <input class="input" required type="text" id="username" placeholder="Enter Your Name"
+                    name="username"><br><br>
+                <label for="username">First name</label><br>
+                <input class="input" required type="text" id="username" placeholder="Enter Your Name"
+                    name="username"><br><br>
+
+                <!-- select option-->
+
+                <div>
+                    <label for="countrys">Countrys</label><br>
+                    <select name="countrys" id="countrys">
+                        <option required value="cambodia">Cambodia</option>
+                        <option required value="usa">USA</option>
+                        <option required value="japan">Japan</option>
+                        <option required value="russia">Russia</option>
+                    </select><br><br>
+                </div>
+
+                <!-- select Radio -->
+
+                <label for="radio">Sex</label><br><br>
+                <div class="radio">
+                    <label class="radio" for="male">Male</label>
+                    <input class="radio" required type="radio" id="age1" name="age">
+                    <label class="radio" for="female">Female</label>
+                    <input class="radio" required type="radio" id="age2" name="age">
+                    <label class="radio" for="other">Other</label>
+                    <input class="radio" required type="radio" id="age3" name="age">
+                </div><br><br>
+                <div>
+                    <label for="male">Comment</label><br>
+                    <textarea required id="comment" name="comment" rows="4" cols="46"></textarea>
+                </div>
+                <div class="between">
+                    <button class="button button1" type="reset" value="Reset">Reset</button>
+                    <button class="button button2" type="submit" value="Submit">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>

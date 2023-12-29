@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Activity</title>
+    <style>
+        h1 {
+            background-color: aqua;
+            padding: 10px;
+        }
+        .sub2{
+            background-color: crimson;
+        }
+        .subitem{
+           border: 1px solid rgb(0, 253, 21);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Nested List</h1>
+    <div>
+        <ol type="1">
+            <li>Item 1</li>
+            <ul type="disc">
+                <li>sub item1</li>
+                <li>sub item1</li>
+                <li>sub item1</li>
+            </ul>
+            <li>Item 2</li>
+            <ol type="A">
+                <li>sub item2</li>
+                <li>sub item2</li>
+                <li class="sub2">sub item2</li>
+                <ul>
+                    <li>sub item2</li>
+                    <li>sub item2</li>
+                    <li class="subitem">sub item2</li>
+                </ul>
+            </ol>
+            <li>Item 3</li>
+            <ol type="I">
+                <li>sub item3</li>
+                <li>sub item3</li>
+                <li>sub item3</li>
+            </ol>
+        </ol>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox css</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body {
+            background-color: #123;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        /* -------- order style ----------- */
+        /* .chil-1 {
+            order: 2;
+        }
+
+        .chil-2 {
+            order: 1;
+        }
+
+        .chil-3 {
+            order: 4;
+        }
+
+        .chil-4 {
+            order: 3;
+        } */
+
+        /* ---------- flex basis----- */
+        /* .chil-1 {
+           flex-grow: 1;
+        }
+        .chil-2 {
+           flex-grow: 2;
+        }
+        .chil-3 {
+           flex-grow: 3;
+        }
+        .chil-4 {
+           flex-grow: 4;
+        } */
+
+        .container div {
+            padding: 10px;
+            text-align: center;
+            width: 100px;
+            margin: 10px;
+            color: wheat;
+            border-radius: 5px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="chil-1">Item 1</div>
+        <div class="chil-2">Item 2</div>
+        <div class="chil-3">Item 3</div>
+        <div class="chil-4">Item 4</div>
+        <div class="chil-5">Item 5</div>
+        <div class="chil-6">Item 6</div>
+        <div class="chil-7">Item 7</div>
+        <div class="chil-8">Item 8</div>
+        <div class="chil-9">Item 9</div>
+        <div class="chil-10">Item 10</div>
+    </div>
+</body>
+
+</html>

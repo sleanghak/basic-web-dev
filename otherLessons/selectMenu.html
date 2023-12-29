@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Select Menu</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            box-sizing: border-box;
+            background-color: #d7d7d7;
+        }
+
+        #btn {
+            display: none;
+        }
+
+        label {
+            display: block;
+            border-radius: 150px;
+            background: #d7d7d7;
+            box-shadow:
+                -3px 3px 10px #ffffff,
+                10px -10px 20px #a3a3a3;
+            width: 70px;
+            height: 70px;
+            margin-bottom: 100px;
+            position: relative;
+        }
+
+
+        .container {
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+
+
+        .icon {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5em;
+            transition: 1s ease;
+            border-radius: 50%
+        }
+
+        #btn:checked+label>.icon {
+            transform: rotateZ(45deg);
+            background-color: lightgreen;
+            border-radius: 50%;
+            transition: all 1s ease;
+        }
+
+
+        .menuContainer {
+            position: absolute;
+            top: -220px;
+        }
+
+        #btn:checked+label>.menuContainer>.shareIcon {
+            background-color: lightblue;
+            font-size: 2em;
+            border-radius: 50%;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow:
+                -3px 3px 10px #ffffff,
+                10px -10px 20px #a3a3a3;
+
+            transform: translateY(-20px);
+            transition: transform 250ms ease;
+            visibility: visible;
+        }
+
+        .shareIcon {
+            visibility: hidden;
+            background-color: lightblue;
+            font-size: 2em;
+            border-radius: 50%;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow:
+                -3px 3px 10px #ffffff,
+                10px -10px 20px #a3a3a3;
+            transform: translateY(0px);
+            transition: visibility 250ms ease, transform 250ms;
+        }
+
+
+        #btn:checked+label>.menuContainer>.likeIcon {
+            background-color: red;
+            font-size: 2em;
+            border-radius: 50%;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow:
+                -3px 3px 10px #ffffff,
+                10px -10px 20px #a3a3a3;
+
+            transform: translateY(-60px);
+            transition: transform 250ms ease;
+            visibility: visible;
+        }
+
+        .likeIcon {
+            visibility: hidden;
+            background-color: red;
+            font-size: 2em;
+            border-radius: 50%;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow:
+                -3px 3px 10px #ffffff,
+                10px -10px 20px #a3a3a3;
+            transform: translateY(140px);
+            transition: visibility 250ms ease, transform 250ms;
+            color: white;
+        }
+
+
+        #btn:checked+label>.menuContainer>.followIcon {
+            background-color: black;
+            font-size: 2em;
+            border-radius: 50%;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow:
+                -3px 3px 10px #ffffff,
+                10px -10px 20px #a3a3a3;
+
+            transition: transform 250ms;
+            transform: translateY(-40px);
+
+            visibility: visible;
+        }
+
+        .followIcon {
+            visibility: hidden;
+            background-color: black;
+            font-size: 2em;
+            border-radius: 50%;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow:
+                -3px 3px 10px #ffffff,
+                10px -10px 20px #a3a3a3;
+            transform: translateY(70px);
+            transition: visibility 250ms ease, transform 250ms;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <input type="checkbox" id="btn" />
+        <label for="btn">
+
+            <div class="menuContainer">
+                <div class="likeIcon" onclick="alert('If you like this code don\'t forget to upvote..')">
+                    <ion-icon name="thumbs-up-outline"></ion-icon>
+                </div>
+                <div class="followIcon" onclick="window.location='https://github.com/Yusuf-YENICERI'">
+                    <ion-icon name="logo-github"></ion-icon>
+                </div>
+                <div class="shareIcon"
+                    onclick="window.prompt('You can share this link in anywhere you want','https://code.sololearn.com/W6f993W2EOAf/?ref=app')">
+                    <ion-icon name="share-social-outline"></ion-icon>
+                </div>
+
+            </div>
+
+            <div class="icon">
+                <ion-icon name="add-outline"></ion-icon>
+            </div>
+        </label>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <!--
+    + database មាន៥ ប្រភេទ
+    1./ key and value
+    2./ row and column ប្រភេទជាទម្រង់ excel
+    3./ NoSQL វារក្សាទុកជា Document ប្រភេទ MongoDB
+    4./ MySQL វារក្សាទុកជា relational database
+    5./ GraphQL (ប្រភេទ database facebook)
+     -->
+
+    <button onclick="addLocalStorage()">addLocalStorage</button>
+    <button onclick="addSessionStorage()">addSessionStorage</button>
+    <script>
+
+        // store value
+        localStorage.setItem('unique_key', 'value');
+        sessionStorage.setItem('unique_key', 'value');
+
+        // update 
+        localStorage.setItem('unique_key', 'Lay');
+        sessionStorage.setItem('unique_key', 'Sopheak');
+
+
+        // get value
+        localStorage.getItem('unique_key');
+        sessionStorage.getItem('unique_key');
+
+        // remove by key
+        // localStorage.removeItem('unique_key');
+        // sessionStorage.removeItem('unique_key');
+
+        // Remove all
+        // localStorage.clear();
+        // sessionStorage.clear();
+
+        // Store forever // 10MB
+        // function addLocalStorage() {
+        //     localStorage.setItem("Hello", "Leanghak SEIREY")
+        //     console.log("Successfully")
+        // }
+
+
+        // Clear when tab is closed // 5MB
+        // function addSessionStorage() {
+        //     sessionStorage.setItem("Hello", "SEIREY Leanghak")
+        //     console.log("Successfully")
+        // }
+    </script>
+</body>
+
+</html>

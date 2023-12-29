@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Card</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        /*
+without box-sizing : border-box,500px+2px=502px
+box-sizing :  border-box,500px+2px=500px
+*/
+        .container {
+
+            background-color: pink;
+            width: 500px;
+            height: 70vh;
+            padding-top: 10vh;
+        }
+
+        .card {
+            width: 300px;
+            height: 50vh;
+            background-color: #CCC;
+            margin: 0 auto;
+            box-shadow: 5px 5px 5px 5px rgb(230, 25, 25);
+        }
+
+        .card .texts {
+            padding-left: 10px;
+            padding-top: 10px;
+            font-size: 20px;
+        }
+
+        .card img {
+            width: 100%;
+            height: 170px;
+        }
+
+        .card .stars {
+            width: 200px;
+            margin: 0 auto;
+        }
+
+        .card .stars i {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 5px;
+            background-color: rgb(20, 218, 53);
+            margin-left: 25px;
+        }
+
+        .card .bottom {
+            position: relative;
+            color: rgb(255, 0, 0);
+            /* margin-left: 10px; */
+            margin-top: 25px;
+        }
+
+        .card .bottom #price {
+            position: absolute;
+            left: 10px;
+            font-size: 25px;
+        }
+
+        .card .bottom button {
+            position: absolute;
+            right: 10px;
+            width: 130px;
+            /* margin-left: 120px; */
+            padding: 8px;
+            border-radius: 5px;
+            background-color: rgb(221, 201, 204);
+            font-weight: 700;
+            border-color: coral;
+            cursor: pointer;
+        }
+
+        .card .bottom button:hover {
+            background-color: rgb(219, 195, 59);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="texts">
+                <h2>Originai Shoe</h2>
+                <i>Nike</i>
+            </div>
+            <img src="./../../assets/images/Mens-Nike-Trainer-on-transparent-background-PNG.png" alt="img">
+            <div class="stars">
+                <i style="background-color: crimson;"></i>
+                <i style="background-color:darkorange;"></i>
+                <i style="background-color:blueviolet;"></i>
+                <i></i>
+            </div>
+            <div class="bottom">
+                <i id="price">Price 30$</i>
+                <button>
+                    Add Card
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

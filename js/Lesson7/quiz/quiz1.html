@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz</title>
+    <style>
+        #result {
+            color: red;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<!-- 
+    1. ចូរបង្កើតកម្មវិធីដែលអាចធ្វើការគណនា ផ្ទៃក្រឡាត្រីកោណ និង បរិមាត្រត្រីកោណ ។
+2. ចូរបង្កើតកម្មវិធីដែលអាចធ្វើការគណនា ផ្ទៃក្រឡាប្រលេឡូក្រាម និង បរិមាត្រប្រលេឡូក្រាម។
+3 .ចូលធ្វើការគណនាប្រមាណវិធី (+ - x / ) ដោយប្រើ switch statement ។
+4. ចូរសរសេរកម្មវិធីមួយដែលអាចគណនារកនិន្ទេ សរបស់និស្សិតដែលមានដូចខាងក្រោមដូចខាងក្រោម៖
+- ពិន្ទុធំជាងឬស្មើ 90 និង តូចជាងឬស្មើ 100 នោះ Grade = A ។
+- ពិន្ទុធំជាងឬស្មើ 80 និង តូចជាងឬស្មើ 89 នោះ Grade = B ។
+- ពិន្ទុធំជាងឬស្មើ 70 និង តូចជាងឬស្មើ 79 នោះ Grade = C ។
+- ពិន្ទុធំជាងឬស្មើ 60 និង តូចជាងឬស្មើ 69 នោះ Grade = D ។
+- ពិន្ទុធំជាងឬស្មើ 50 និង តូចជាងឬស្មើ 59 នោះ Grade = E ។
+- ពិន្ទុតូចជា 50 នោះ Grade = F ។
+ -->
+
+<body>
+    <!--ផ្ទៃក្រឡាត្រីកោណ s=1/2*(b*h) -->
+    <!-- បរិមាណត្រីកោណ p=a+b+c // triangleVolume -->
+    <!-- ផ្ទៃក្រឡាប្រលេឡូក្រាម s=b*h // parallelogramArea-->
+    <!-- បរិមាត្រប្រលេឡូក្រាម p=2*(a*b) // parallelogramVolume -->
+    <div>
+        <input type="number" placeholder="B" value="" id=""><br><br>
+        <input type="number" placeholder="H" name="" id=""><br><br>
+        <button onclick="areaTriangle()" type="button">Calculate</button><br><br>
+        <span>The result S : </span>
+        <span id="result"></span>
+    </div>
+
+    <script>
+        function areaTriangle() {
+            var b = document.getElementsByTagName('input')[0].value;
+            var h = document.getElementsByTagName('input')[1].value;
+            var s = 1 / 2 * (b * h);
+            var result;
+            document.getElementById('result').innerHTML = s;
+        }
+    </script>
+</body>
+
+</html>

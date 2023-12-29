@@ -1,0 +1,34 @@
+   ::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    box-sizing: border-box;
+    scroll-behavior:smooth;
+}
+
+h2 {
+    text-align: center;
+    margin: 10px 10px 10px 10px;
+    font-size: 30px;
+    color: rgb(16, 167, 167);
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'Roboto Slab', serif;
+    font-family: 'Staatliches', cursive;
+}
+
+pre {
+    padding: 5px;
+    margin: 5px;
+}
+
+p {
+    text-align: center;
+    color: deeppink;
+    padding: 5px;
+    margin: 5px;
+    font-size: 20px;
+}
+a{
+    text-decoration: none;
+}

@@ -1,0 +1,175 @@
+<!-- 
+    1. Horizontal Nav Bar
+    2. Dropdown
+        2.1 no hover : display : none,
+        2.2 hover : display : block 
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Dropdowns</title>
+    <!-- -------------Link Icon------------------------ -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        .nav {
+            background-color: rgb(2, 170, 78);
+        }
+
+        .nav ul {
+            list-style-type: none;
+            font-size: 0px;
+        }
+
+        .nav ul li {
+            width: 150px;
+            display: inline-block;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .nav ul li:hover {
+            background-color: rgb(5, 34, 63);
+        }
+
+        .nav ul li a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-size: 18px;
+            vertical-align: sub;
+            margin-left: 10px;
+        }
+
+        .nav ul li span {
+            color: white;
+            vertical-align: sub;
+            font-size: 20px;
+        }
+
+        /* dropdown */
+        .dropdown {
+            background-attachment: red;
+            position: relative;
+        }
+
+        .dropdownContent {
+            position: absolute;
+            z-index: 1;
+            display: none;
+            left: 0px;
+            top: 48px;
+            background-color: #555;
+        }
+
+        .dropdown:hover .dropdownContent {
+            display: block;
+        }
+
+        .dropdownContent ul li {
+            display: block;
+        }
+
+        /* content */
+        .content {
+            text-align: center;
+        }
+
+       
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li>
+                <span class="material-icons">home</span>
+                <a href="#">Home</a>
+            </li>
+
+            <li class="dropdown">
+                <span class="material-icons">shopping_cart</span>
+                <a href="#">Product</a>
+
+                <!-- dropdown -->
+                <div class="dropdownContent">
+                    <ul>
+                        <li>
+                            <a href="#">Product1</a>
+                        </li>
+                        <li>
+                            <a href="#">Product2</a>
+                        </li>
+                        <li>
+                            <a href="#">Product3</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <!-- <li>
+                <span class="material-icons">groups</span>
+                <a href="#">About</a>
+            </li> -->
+            <li class="dropdown">
+                <span class="material-icons">groups</span>
+                <a href="#">About</a>
+
+                <!-- dropdown -->
+                <div class="dropdownContent">
+                    <ul>
+                        <li>
+                            <a href="#">Product1</a>
+                        </li>
+                        <li>
+                            <a href="#">Product2</a>
+                        </li>
+                        <li>
+                            <a href="#">Product3</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <!-- <li>
+                <span class="material-icons">contact_mail</span>
+                <a href="#">Contact</a>
+            </li> -->
+            <li class="dropdown">
+                <span class="material-icons">contact_mail</span>
+                <a href="#">Contact</a>
+
+                <!-- dropdown -->
+                <div class="dropdownContent">
+                    <ul>
+                        <li>
+                            <a href="#">Product1</a>
+                        </li>
+                        <li>
+                            <a href="#">Product2</a>
+                        </li>
+                        <li>
+                            <a href="#">Product3</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="content">
+        <h1>Hello</h1>
+
+      
+    </div>
+</body>
+
+</html>

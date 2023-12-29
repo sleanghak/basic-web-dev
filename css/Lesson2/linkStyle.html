@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Link Style In CSS</title>
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            border: 1px solid #e7e7e7;
+            background-color: #f3f3f3;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: #666;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        a:link {
+            color: green;
+
+        }
+
+        a:visited {
+            color: rgb(161, 20, 20);
+
+        }
+
+        a:hover {
+            color: rgb(41, 11, 124);
+        }
+
+        a:active {
+            color: rgb(0, 204, 92);
+
+        }
+    </style>
+</head>
+
+
+<body>
+    <!-- Next ជា​ framework របស់ React ហើយ​ React ជា Library របស់ JavaScript-->
+    <div>
+        <ul>
+            <li>
+                <a href="#10" title="home page">Home</a>
+            </li>
+            <li>
+                <a href="#04" title="product page">Product</a>
+            </li>
+            <li>
+                <a href="#05" title="about page">About</a>
+            </li>
+
+        </ul>
+    </div>
+</body>
+
+</html>

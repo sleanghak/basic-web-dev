@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz</title>
+    <style>
+        #result {
+            color: red;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <!-- <input type="number" placeholder="input grade" value=""><br><br> -->
+
+        <button type="button" onclick="C_Grade(grade=100) ">Grade</button><br><br>
+
+        <span>Your Grade is : </span>
+        <span id="result"></span>
+    </div>
+
+    <script>
+        function C_Grade() {
+            // var grade = document.getElementsByTagName('input')[0].value;
+            var result = "";
+
+            if (grade >= 90 && grade <= 100) {
+                result = "Grade = A";
+            }
+            else if (grade >= 80 && grade <= 89) {
+                result = "Grade = B";
+            }
+            else if (grade >= 70 && grade <= 79) {
+                result = "Grade = C";
+            }
+            else if (grade >= 60 && grade <= 69) {
+                result = "Grade = D";
+            }
+            else if (grade >= 50 && grade <= 59) {
+                result = "Grade = E";
+            }
+            else {
+                result = "Grade = F";
+            }
+            document.getElementById('result').innerHTML = result;
+        }
+    </script>
+
+</body>
+
+</html>

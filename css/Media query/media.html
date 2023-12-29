@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link ដើម្បីប្រើ Icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 10px;
+            background-color: red;
+            color: white;
+        }
+
+        /* 0 px -> 768px  */
+        @media only screen and (max-width:768px) {
+            [class*='navbar'] {
+                display: none;
+            }
+        }
+
+        /* 768px -> up */
+        @media only screen and (min-width:768px) {
+            [class*='nemu'] {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="nav">
+        <div>
+            <span class="material-icons nemu">
+                menu
+            </span>
+        </div>
+        <div class="navbar">
+            Menu Navbar
+        </div>
+    </div>
+
+</body>
+
+</html>

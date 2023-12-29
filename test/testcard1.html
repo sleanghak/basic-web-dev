@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>card product html css</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        .col-3 {
+            float: left;
+            width: 100%;
+            padding: 12px;
+
+        }
+
+        .col-3 img {
+            width: 100%;
+        }
+
+        .col-3 h4 {
+            text-align: center;
+        }
+
+        .col-3 div {
+            /* border: 1px solid #CCC; */
+            box-shadow: 2px 2px 2px rgb(221, 216, 216);
+        }
+
+        .padding {
+            padding: 10px;
+        }
+
+        .color {
+            color: red;
+        }
+
+        /*max-width start: 0px - 600px */
+        @media only screen and (max-width: 600px) {
+            .col-3 {
+                width: 100%;
+            }
+        }
+
+        /*min-width start 600px -768px */
+        @media only screen and (min-width: 600px) {
+            .col-3 {
+                width: 50%;
+            }
+        }
+
+        /*min-width start 768px->992px */
+        @media only screen and (min-width: 768px) {
+            .col-3 {
+                width: 33.33%;
+            }
+        }
+
+        /*min-width start 992px-1200px */
+        @media only screen and (min-width: 992px) {
+            .col-3 {
+                width: 33.33%;
+            }
+        }
+
+        /*min-width start 1200px->up */
+        @media only screen and (min-width: 1200px) {
+            .col-3 {
+                width: 33.33%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="col-3">
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXhv5ADK9YiCE4JNskzLK0For7fPAXXPwQfLy0ZJM_xtEDM7qC3YpK0OrHB9QXng93vhk&usqp=CAU"
+                alt="img">
+            <div class="padding">
+                <h4>Write Decripion Here</h4>
+                <h4 class="color"> $2.5 </h4>
+            </div>
+        </div>
+    </div>
+    <div class="col-3">
+        <div>
+            <img src="https://i.pinimg.com/originals/aa/02/78/aa02780bbc7e6c5e2d52d9b0e919fbf6.jpg" alt="img">
+            <div class="padding">
+                <h4>Write Decripion Here</h4>
+                <h4 class="color"> $2.5 </h4>
+            </div>
+        </div>
+    </div>
+    <div class="col-3">
+        <div>
+            <img src="https://i.pinimg.com/originals/aa/02/78/aa02780bbc7e6c5e2d52d9b0e919fbf6.jpg" alt="img">
+            <div class="padding">
+                <h4>Write Decripion Here</h4>
+                <h4 class="color"> $2.5 </h4>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

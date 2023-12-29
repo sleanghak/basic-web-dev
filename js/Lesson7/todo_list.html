@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TODO List</title>
+    <style>
+        #todo-list {
+            /* list-style-type: none;
+            padding: 0; */
+        }
+
+        #todo-list li {
+            margin-bottom: 10px;
+        }
+
+        .completed {
+            text-decoration: line-through;
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>TODO List</h1>
+    <input id="taskInput" type="text" placeholder="Enter task">
+    <button id="addTaskBtn">Add Task</button>
+    <ul id="todo-list"></ul>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const taskInput = document.getElementById("taskInput");
+            const addTaskBtn = document.getElementById("addTaskBtn");
+            const todoList = document.getElementById("todo-list");
+
+            addTaskBtn.addEventListener("click", function () {
+                const taskText = taskInput.value.trim();
+                if (taskText !== "") {
+                    const task = document.createElement("li");
+                    task.innerText = taskText;
+                    todoList.appendChild(task);
+
+                    task.addEventListener("click", function () {
+                        this.classList.toggle("completed");
+                    });
+
+                    task.addEventListener("contextmenu", function (e) {
+                        e.preventDefault();
+                        this.remove();
+                    });
+
+                    taskInput.value = "";
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
+
+<!-- 
+This code creates a simple TODO list where you can add tasks by entering them into the input field and clicking the "Add
+Task" button. Each task is added as a list item (`<li>`) to the `<ul>` element. You can mark a task as completed by
+        clicking on it, and you can remove a task by right-clicking on it. Completed tasks are visually differentiated
+        with a line-through style and green color. -->

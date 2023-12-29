@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link font-family  -->
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@800&display=swap" rel="stylesheet">
+    <title>header</title>
+    <style>
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+            height: 70vh;
+            background-image: url('https://mir-s3-cdn-cf.behance.net/projects/404/07d9cf157476369.Y3JvcCwxNzcyLDEzODYsMCwxOTI.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .imgLogo {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            border-radius: 60px;
+            top: 60%;
+            left: 2%;
+        }
+
+        .namePro {
+            position: absolute;
+            font-family: 'Stick No Bills', sans-serif;
+            font-size: 30px;
+            top: 70%;
+            left: 12%;
+        }
+        /* max-width 0-> 600px*/
+        @media only screen and (max-width: 600px) {
+            .namePro {
+                left: 32%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <img class="imgLogo"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRdlVlX8JoBRx7jniuCtSNFAN9Fq2q1X_Bgy_1e55dSwF9YVMVculD14juk7sHhszRB7Y&usqp=CAU"
+                alt="logo">
+        </div>
+        <div class="namePro">
+           Food Khmer
+        </div>
+    </div>
+</body>
+
+</html>

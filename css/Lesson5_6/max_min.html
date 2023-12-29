@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Max Min</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        .nav {
+            /* 0px -> 300px */
+            max-width: 300px;
+            height: 10vh;
+            background-color: yellowgreen;
+        }
+
+        .footer {
+            /* 300px ->up */
+            display: inline-block;
+            min-width: 400px;
+            height: 10vh;
+            background-color: rgb(111, 122, 89);
+        }
+
+        .max_width {
+            max-width: 500px;
+            height: 200px;
+            background-color: darkgoldenrod;
+        }
+
+        .min_width {
+            display: inline-block;
+            min-width: 500px;
+            height: 200px;
+            background-color: rgb(175, 150, 88);
+        }
+
+        h1 {
+            width: 700px;
+            height: 50px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <h3>
+            Navbar
+        </h3>
+    </div>
+    <div class="footer">
+        <h3>
+            Footer
+        </h3>
+    </div>
+
+    <div class="max_width">
+        <h1>
+            Max Width
+        </h1>
+    </div>
+    <div class="min_width">
+        <h1>Min Width</h1>
+    </div>
+
+    <script>
+        const words = "Seirey Leanghak"
+        const amount = words.split(" ")
+        console.log(amount)
+        console.log(amount.length)
+    </script>
+
+</body>
+
+</html>

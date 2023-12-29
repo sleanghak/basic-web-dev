@@ -1,0 +1,36 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+}
+
+.navBar {
+    background-color: aqua;
+    width: 100%;
+    height: 10vh;
+}
+
+.leftSidebar {
+    background-color: pink;
+    width: 20%;
+    height: 80vh;
+    float: left;
+}
+
+.content {
+    background-color: darkkhaki;
+    width: 80%;
+    height: 80vh;
+    float: left;
+}
+
+.footer {
+    background-color: deepskyblue;
+    float: left;
+    width: 100%;
+    height: 10vh;
+}

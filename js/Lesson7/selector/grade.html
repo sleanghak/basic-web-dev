@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            min-height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        input[type=number] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+            margin-top: 2%;
+        }
+
+        .calculator {
+            background-color: #04AA6D;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .calculator:hover {
+            background-color: #45a049;
+        }
+
+        #total,
+        #average,
+        #result,
+        #grade {
+            color: red;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <input type="number" id="html" placeholder="HTML" />
+        <input type="number" id="css" placeholder="CSS" />
+        <input type="number" id="javascript" placeholder="Javascript" />
+        <input type="number" id="jquery" placeholder="Jquery" />
+        <input type="number" id="php" placeholder="PHP" />
+
+        <button class="calculator" onclick="handleCalculator()">Calculator</button><br /><br />
+
+        <li>
+            <span>The total: </span>
+            <span id="total"></span>
+        </li><br /><br />
+
+        <li>
+            <span>The average: </span>
+            <span id="average"></span>
+        </li><br /><br />
+
+        <li>
+            <span>The result: </span>
+            <span id="result"></span>
+        </li><br /><br />
+
+        <li>
+            <span>The grade: </span>
+            <span id="grade"></span>
+        </li>
+    </div>
+
+    <script>
+        function handleCalculator() {
+
+            //អញ្ញាតសម្រាប់ផ្ទុកឬរក្សាតម្លៃពី input
+            var html = Number(document.getElementById("html").value);
+            var css = Number(document.getElementById("css").value);
+            var javascript = Number(document.getElementById("javascript").value);
+            var jquery = Number(document.getElementById("jquery").value);
+            var php = Number(document.getElementById("php").value);
+
+            // សម្រាប់រក total
+            var total = html + css + javascript + jquery + php;
+            document.getElementById("total").innerHTML = total;
+
+            // សម្រាប់រក average
+            var average = total / 5;
+            document.getElementById("average").innerHTML = average;
+
+            // សម្រាប់ដាក់លក្ខខ័ណ្ឌរក result
+            var result;
+            if (average >= 50) {
+                result = "PASS";
+            } else {
+                result = "FAIL";
+            }
+            document.getElementById("result").innerHTML = result;
+
+            // សម្រាប់ដាក់លក្ខខ័ណ្ឌរក grade
+            var grade;
+            if (average >= 90) {
+                grade = "A";
+            } else if (average >= 80) {
+                grade = "B";
+            } else if (average >= 70) {
+                grade = "C";
+            } else if (average >= 60) {
+                grade = "D";
+            } else if (average >= 50) {
+                grade = "E";
+            } else {
+                grade = "F";
+            }
+            document.getElementById("grade").innerHTML = grade;
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,253 @@
+<!--------------------------------------------->
+<!---❌❌DO NOT COPY WITHOUT PERMISSION❌❌---->
+<!---------------------------------------------->
+<!------    CREATED BY YIPMONG       ---------->
+
+<!----------------------------------------------
+                    RELEASED
+        CODE WRITTEN AND CREATED BY YIPMONG
+               ALL RIGHTS RESERVED
+                 VERSION CONTROL
+------------------------------------------------
+VERSION 1.0
+CREATED: 03 - JUNE - 2022
+UPDATE: NOT YET
+   (PLEASE COMMENT A SUGGESTION FOR THE UPDATE)
+
+PROTOTYPED: 12 - MAY - 2022
+------------------------------------------------
+☆☆☆☆☆      FOLLOW ME FOR MORE        ☆☆☆☆☆
+----------------------------------------------->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>To Do List</title>
+    <style>
+        /*             CODE WRITTEN BY
+                    YIPMONG                   */
+        @import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+        body {
+            margin: 0;
+            min-width: 250px;
+            /* background-color: orange; */
+        }
+
+        /* Include the padding and border in an element's total width and height */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Remove margins and padding from the list */
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Style the list items */
+        ul li {
+            cursor: pointer;
+            position: relative;
+            padding: 12px 8px 12px 40px;
+            list-style-type: none;
+            background: #eee;
+            font-size: 18px;
+            transition: 0.2s;
+
+            /* make the list items unselectable */
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        /* Set all odd list items to a different color (zebra-stripes) */
+        ul li:nth-child(odd) {
+            background: pink;
+        }
+
+        ul li:nth-child(even) {
+            background-color: skyblue;
+        }
+
+        /* Red background-color on hover */
+        ul li:hover {
+            background: red;
+        }
+
+        /* When clicked on, add a background color and strike out text */
+        ul li.checked {
+            background: #888;
+            color: #fff;
+            text-decoration: line-through;
+        }
+
+        /* Add a "checked" mark when clicked on */
+        ul li.checked::before {
+            content: '';
+            position: absolute;
+            border-color: #fff;
+            border-style: solid;
+            border-width: 0 2px 2px 0;
+            top: 10px;
+            left: 16px;
+            transform: rotate(45deg);
+            height: 15px;
+            width: 7px;
+        }
+
+        /* Style the close button */
+        .close {
+            position: absolute;
+            right: 0;
+            top: 0;
+            padding: 12px 16px 12px 16px;
+        }
+
+        .close:hover {
+            background-color: #f44336;
+            color: white;
+        }
+
+        /* Style the header */
+        .header {
+            background-color: orange;
+            padding: 30px 40px;
+            color: white;
+            text-align: center;
+            /* border-radius:10px;*/
+        }
+
+        /* Clear floats after the header */
+        .header:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Style the input */
+        input {
+            margin: 0;
+            border: none;
+            border-radius: 0;
+            width: 75%;
+            padding: 10px;
+            float: left;
+            font-size: 16px;
+        }
+
+        /* Style the "Add" button */
+        .addBtn {
+            padding: 10px;
+            width: 25%;
+            background: skyblue;
+            color: #555;
+            float: left;
+            text-align: center;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            border-radius: 0;
+        }
+
+        .addBtn:hover {
+            background-color: skyblue;
+        }
+
+        footer {
+            background-color: Red;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            text-align: center;
+            font-weight: bold;
+            color: black;
+            width: 100%;
+            height: 50px;
+            padding-top: 20px;
+            font-family: 'Creepster', cursive;
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="myDIV" class="header">
+        <h2 style="margin:5px">My To Do List 2022</h2>
+        <input type="text" id="myInput" placeholder="Create a To-Do list...">
+        <span onclick="newElement()" class="addBtn">Add</span>
+    </div>
+
+    <ul id=" ">
+        <li>Check Sololearn</li>
+        <li class="checked">Read the Notification</li>
+        <li>Write Some Code bits</li>
+    </ul>
+    <footer>YIPMONG 2022&copy;</footer>
+    <script>
+        // alert("Hello friends\nThank You for the visit\nI encountered a bug while copying the javascript code from my external to the sololearn editor and i have no option rather than to copy and packed everything in the HTML section")
+        // alert("Please dont forget to upvote my code and also remember to leave Your suggestions in the comment section because it really help me to improve on my code🙏🏻😁🤗❤️\n\nIf you like it! Be sured to follow me in order to get update on my forthcoming codes")
+
+        // Create a "close" button and append it to each list item
+        var myNodelist = document.getElementsByTagName("LI");
+        var i;
+        for (i = 0; i < myNodelist.length; i++) {
+            var span = document.createElement("SPAN");
+            var txt = document.createTextNode("\u00D7");
+            span.className = "close";
+            span.appendChild(txt);
+            myNodelist[i].appendChild(span);
+        }
+
+        // Click on a close button to hide the current list item
+        var close = document.getElementsByClassName("close");
+        var i;
+        for (i = 0; i < close.length; i++) {
+            close[i].onclick = function () {
+                var div = this.parentElement;
+                div.style.display = "none";
+            }
+        }
+
+        // Add a "checked" symbol when clicking on a list item
+        var list = document.querySelector('ul');
+        list.addEventListener('click', function (ev) {
+            if (ev.target.tagName === 'LI') {
+                ev.target.classList.toggle('checked');
+            }
+        }, false);
+
+        // Create a new list item when clicking on the "Add" button
+        function newElement() {
+            var li = document.createElement("li");
+            var inputValue = document.getElementById("myInput").value;
+            var t = document.createTextNode(inputValue);
+            li.appendChild(t);
+            if (inputValue === '') {
+                alert("You must write something!");
+            } else {
+                document.getElementById("myUL").appendChild(li);
+            }
+            document.getElementById("myInput").value = "";
+
+            var span = document.createElement("SPAN");
+            var txt = document.createTextNode("\u00D7");
+            span.className = "close";
+            span.appendChild(txt);
+            li.appendChild(span);
+
+            for (i = 0; i < close.length; i++) {
+                close[i].onclick = function () {
+                    var div = this.parentElement;
+                    div.style.display = "none";
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>

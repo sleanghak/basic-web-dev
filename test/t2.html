@@ -1,0 +1,61 @@
+<!-- Sorry, as an AI language model, I cannot perform programming tasks. However, here is an example code for a simple
+calculator with JavaScript and innerHTML:
+
+html -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple Calculator</title>
+
+</head>
+
+<body>
+    <h1>Simple Calculator</h1>
+    <label for="num1">Num 1:</label>
+    <input type="text" id="num1"><br><br>
+    <label for="operator">Operator:</label>
+    <select id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select><br><br>
+    <label for="num2">Num 2:</label>
+    <input type="text" id="num2"><br><br>
+    <button onclick="cal()">Calculate</button><br><br>
+    <div id="result"></div>
+
+
+
+    <script>
+        function cal() {
+            var num1 = document.getElementById("num1").value;
+            var num2 = document.getElementById("num2").value;
+            var op = document.getElementById("operator").value;
+            var result;
+
+            if (op == "+") {
+                result = Number(num1) + Number(num2);
+            } else if (op == "-") {
+                result = num1 - num2;
+            } else if (op == "*") {
+                result = num1 * num2;
+            } else if (op == "/") {
+                result = num1 / num2;
+            }
+
+            document.getElementById("result").innerHTML = "Result: " + result;
+        }
+    </script>
+</body>
+
+</html>
+<!-- 
+
+This code uses HTML, CSS and JavaScript, with the `innerHTML` property to display the result. The `cal()` function gets
+the input values of the two numbers and the operator, performs the corresponding calculation based on the selected
+operator, and displays the result in the `result` div element using `innerhtml`. The HTML code contains a form with
+`input` and `select` elements for the numbers and operator, and a `button` that triggers the `cal()` function when
+clicked. -->

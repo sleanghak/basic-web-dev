@@ -1,0 +1,14 @@
+* {
+    border: 0px;
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    text-align: center;
+    color: #FFF;
+    background-color: #009973;
+    padding: 10px;
+    font-family: 'Staatliches', cursive;
+}

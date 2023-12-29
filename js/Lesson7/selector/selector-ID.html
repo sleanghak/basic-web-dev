@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changing HTML Elements</title>
+</head>
+
+<body>
+    <!-- id return one Elements -->
+    <div>
+        <button id="chang">click me</button>
+
+        <input type="password" name="" id="">
+        <input type="date">
+    </div>
+    <script>
+        document.getElementById("chang").innerHTML = "click";
+        document.getElementById("chang").style.backgroundColor = 'green';
+        document.getElementById("chang").style.color = '#FFF';
+
+        document.getElementsByTagName('input')[1].setAttribute('type', 'text');
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .center {
+            display: flex;
+            justify-content: center;
+        }
+
+        .bg {
+            padding: 20px;
+            width: 30%;
+            height: auto;
+            background-color: rgb(225, 243, 243);
+            border-radius: 10px;
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            display: block;
+            margin: 0 auto;
+        }
+        .input {
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .button {
+            border: none;
+            border-radius: 5px;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            /* display: inline-block; */
+            font-size: 16px;
+            /* margin: 10px 50px 0px 0px; */
+            cursor: pointer;
+        }
+
+        .button1 {
+            background-color: #4CAF50;
+        }
+
+        .button1:hover {
+            background-color: #308633;
+        }
+
+        .button2 {
+            background-color: #008CBA;
+        }
+
+        .button2:hover {
+            background-color: #175f77;
+        }
+
+        .div {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center">
+        <div class="bg">
+            <form>
+                <div>
+                    <img src="https://yt3.ggpht.com/OLuhaGN_2txsq-blg1AqTdsCzHw_Rv21CeGTQP2_IUEwQ-S_2ki8iguQPpY7Y9HCMSB4W6n5-ihRmJU=s640-c-fcrop64=1,00000000ffffffff-nd-v1"
+                        alt="Profile">
+                        <br>
+                    <h3 style="text-align: center;">Profile</h3>
+                </div><br>
+                <div>
+                    <input class="input" type="text" placeholder="Last Name" required><br><br>
+                    <input class="input" type="text" placeholder="First Name" required><br>
+                </div><br>
+                <div>
+                    <label for="countrys">Countrys</label><br>
+                    <select class="input" name="countrys" id="countrys">
+                        <option required value="cambodia">Cambodia</option>
+                        <option required value="usa">USA</option>
+                        <option required value="japan">Japan</option>
+                        <option required value="russia">Russia</option>
+                    </select><br><br>
+                </div>
+                <div>
+                    <label for="radio">Sex</label><br><br>
+                    <div class="radio">
+                        <label class="radio" for="male">Male</label>
+                        <input class="radio" required type="radio" id="age1" name="age">
+                        <label class="radio" for="female">Female</label>
+                        <input class="radio" required type="radio" id="age2" name="age">
+                        <label class="radio" for="other">Other</label>
+                        <input class="radio" required type="radio" id="age3" name="age">
+                    </div><br>
+                </div>
+                <div>
+                    <textarea class="input" name="message" id="" cols="30" rows="10" required></textarea>
+                </div><br>
+                <div class="div">
+                    <button class="button button1" type="submit" value="Submit">Submit</button>
+                    <button class="button button2" type="reset" value="reset">Reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

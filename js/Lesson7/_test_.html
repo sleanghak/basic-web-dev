@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <input type="number" placeholder="input number A" id="num1" value=""><br><br>
+    <input type="number" placeholder="input number B" id="num2" value=""><br><br>
+    <button onclick="submitName()">=</button>
+    <p id="result"></p> -->
+
+    <!-- 
+    <div id="calculator">
+        <div id="answer">0</div>
+        <button onclick="reset()">C</button>
+        <button onclick="compute('+')">+</button>
+        <button onclick="compute('-')">-</button>
+        <button onclick="compute('*')">*</button>
+        <button onclick="compute('/')">/</button>
+        <button onclick="equal()">=</button>
+        <button onclick="insert('7')">7</button>
+        <button onclick="insert('8')">8</button>
+        <button onclick="insert('9')">9</button>
+        <button onclick="insert('4')">4</button>
+        <button onclick="insert('5')">5</button>
+        <button onclick="insert('6')">6</button>
+        <button onclick="insert('1')">1</button>
+        <button onclick="insert('2')">2</button>
+        <button onclick="insert('3')">3</button>
+        <button onclick="insert('0')">0</button>
+        <button onclick="insert('.')">.</button>
+    </div> -->
+
+
+    <input type="text" placeholder="input your name" id="name" value="">
+    <button type="button" onclick="hello()">submit</button>
+    <script>
+
+        function hello() {
+            console.log(document.getElementById('name').value);
+        }
+        // let answer = document.getElementById("answer");
+        // let computation = "";
+        // let newComputation = true;
+
+        // function insert(value) {
+        //     if (newComputation) {
+        //         computation = "";
+        //         newComputation = false;
+        //     }
+        //     computation += value;
+        //     answer.innerHTML = computation;
+        // }
+
+        // function compute(operation) {
+        //     computation += operation;
+        //     answer.innerHTML = computation;
+        //     newComputation = false;
+        // }
+
+        // function equal() {
+        //     computation = eval(computation);
+        //     answer.innerHTML = computation;
+        //     newComputation = true;
+        // }
+
+        // function reset() {
+        //     computation = "";
+        //     answer.innerHTML = 0;
+        //     newComputation = true;
+        // }
+
+        function submitName() {
+            // console.log('hello!')
+            // console.log('Hello ', document.getElementById('name').value);
+            // console.log('You are ', document.getElementById('age').value, 'years old now!');
+            var num1 = Number(document.getElementById('num1').value);
+            var num2 = Number(document.getElementById('num2').value);
+            var total = num1 + num2;
+
+            // document.getElementById('result').innerHTML = 'Name: ' + name + 'age: ' + (2023 - year);
+            document.getElementById('result').innerHTML = `The total = ${num1} + ${num2} = ${total}`;
+        }
+    </script>
+</body>
+
+</html>

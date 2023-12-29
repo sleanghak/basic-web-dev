@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam1</title>
+
+    <style>
+        #results {
+            color: red;
+            font-weight: 700;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div>
+
+        <input type="number" placeholder="input number a" id="num1" value=""><br><br>
+        <input type="text" placeholder="input options" id="opt" value=""><br><br>
+        <input type="number" placeholder="input number b" id="num2" value=""><br><br>
+
+        <button type="button" onclick="Operator()">Calculate</button><br><br>
+        <span>The Results: </span>
+        <span id="results"></span>
+    </div>
+
+    <script>
+        function Operator() {
+            var num1 = Number(document.getElementById('num1').value);
+            var num2 = Number(document.getElementById('num2').value);
+            var total;
+
+            var option = String(document.getElementById('opt').value);
+
+            switch (option) {
+                case '+':
+                    total = num1 + num2;
+                    break;
+                case '-':
+                    total = num1 - num2;
+                    break;
+                case '*':
+                    total = num1 * num2;
+                    break;
+                default:
+                    total = num1 / num2;
+                    break;
+            }
+            document.getElementById('results').innerHTML = total;
+        }
+
+    </script>
+
+
+១ ឈ្មោះ 
+២ អាយុ 
+៣ ភេទ
+៤ ទីកន្លែងកំណើត
+៥ សកលវិទ្យាល័យ
+៦ ទីកន្លែងបច្ចុប្បន្ន
+
+
+</body>
+
+</html>
+

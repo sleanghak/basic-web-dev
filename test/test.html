@@ -1,0 +1,136 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+      
+    </style>
+
+</head>
+
+<body>
+
+    <div>
+        <input type="text" placeholder="input number A" id="num1" value=""><br><br>
+
+        <select id="operator">
+            <option>Select a option</option>
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">x</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        </select><br><br>
+
+        <input type="text" placeholder="input number B" id="num2" value=""><br><br>
+
+        <button type="button" onclick="Calculate()">Calculate</button><br /><br />
+
+        <span>Your Result : </span>
+
+        <span id="result"></span>
+    </div>
+    
+    <script>
+        function Calculate() {
+            var num1 = Number(document.getElementById('num1').value);
+            var num2 = Number(document.getElementById('num2').value);
+            var operators = document.getElementById('operator').value;
+            var result;
+
+            if (operators == "+") {
+                result = num1 + num2;
+            } else if (operators == "-") {
+                result = num1 - num2;
+            }
+            else if (operators == "*") {
+                result = num1 * num2;
+            }
+            else if (operators == "/") {
+                result = num1 / num2;
+            } else {
+                result = num1 % num2;
+            }
+
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+
+</body>
+
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: transparent;
+            /* Default background color for the navbar */
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/otherpage">Other Page</a></li>
+                <!-- Add more navigation links as needed -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Your page content goes here -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Check if the current page is the homepage
+            if (window.location.pathname === '/') {
+                // Homepage, no background color for the navbar
+                document.querySelector('header').style.backgroundColor = 'transparent';
+            } else {
+                // Other pages, set background color for the navbar
+                document.querySelector('header').style.backgroundColor = '#f0f0f0'; // Set the background color you want
+            }
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!-- 
+    Body mass index (BMI) is a common tool for deciding whether a person has an appropriate body weight. It
+    measures a person’s weight in relation to their height.
+    According to the National Institutes of Health (NIH):
+    ● A BMI of less than 18.5 means that a person is underweight.
+    ● A BMI of between 18.5 and 24.9 is ideal.
+    ● A BMI of between 25 and 29.9 is overweight.
+    ● A BMI over 30 indicates obesity.
+
+    សន្ទស្សន៍ម៉ាសរាងកាយ (BMI) គឺជាឧបករណ៍ទូទៅសម្រាប់ការសម្រេចចិត្តថាតើមនុស្សម្នាក់មានទម្ងន់រាងកាយសមរម្យឬអត់។ វា។
+     វាស់ទម្ងន់របស់មនុស្សទាក់ទងទៅនឹងកម្ពស់របស់ពួកគេ។
+     យោងតាមវិទ្យាស្ថានសុខភាពជាតិ (NIH)៖
+     ● BMI តិចជាង 18.5 មានន័យថាមនុស្សម្នាក់មានទម្ងន់តិច។
+     ● BMI ចន្លោះពី 18.5 ទៅ 24.9 គឺល្អបំផុត។
+     ● BMI ចន្លោះពី 25 ទៅ 29.9 គឺលើសទម្ងន់។
+     ● BMI លើសពី 30 បង្ហាញពីភាពធាត់។
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI</title>
+    <style>
+        #result {
+            color: red;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <input type="number" name="" placeholder="Height" id="">
+        <input type="number" name="" placeholder="Weight" id="">
+        <input onclick="findBMI()" type="button" value="BMI"><br /><br />
+        <span>Your BMI is : </span>
+        <span id="result"></span>
+    </div>
+
+
+    <script>
+
+        function findBMI() {
+            // console.log(document.getElementsByTagName('input'));
+            var height = document.getElementsByTagName('input')[0].value;
+            var weight = document.getElementsByTagName('input')[1].value;
+            var bmi = weight / height ** 2;
+            // console.log(height, weight);
+            var result = '';
+
+            if (bmi < 18.5) {
+                result = 'underweight';
+            } else if (bmi < 24.9) {
+                result = "ideal";
+            }
+            else if (bmi < 29.9) {
+                result = "overweight";
+            } else {
+                result = "obesity";
+            }
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</body>
+
+</html>

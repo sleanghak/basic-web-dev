@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        [class*="col-"] {
+            float: left;
+            /* padding: 15px;
+            border: 1px solid red; */
+        }
+
+        .col-1 {
+            width: 8.33%;
+        }
+
+        .col-2 {
+            width: 16.66%;
+        }
+
+        .col-3 {
+            width: 25%;
+        }
+
+        .col-4 {
+            width: 33.33%;
+        }
+
+        .col-5 {
+            width: 41.66%;
+        }
+
+        .col-6 {
+            width: 50%;
+        }
+
+        .col-7 {
+            width: 58.33%;
+        }
+
+        .col-8 {
+            width: 66.66%;
+        }
+
+        .col-9 {
+            width: 75%;
+        }
+
+        .col-10 {
+            width: 83.33%;
+        }
+
+        .col-11 {
+            width: 91.66%;
+        }
+
+        .col-12 {
+            width: 100%;
+        }
+
+        .nav {
+            height: 10vh;
+            background-color: red;
+        }
+
+        .nav1 {
+            height: 10vh;
+            background-color: rgb(4, 255, 138);
+        }
+
+        .nav2 {
+            height: 10vh;
+            background-color: rgb(15, 192, 39);
+        }
+
+        .nav3 {
+            height: 10vh;
+            background-color: rgb(21, 255, 0);
+        }
+
+        /* 0px ->768px */
+        @media only screen and (max-width:768px) {
+            [class*='col-'] {
+                width: 100%;
+            }
+        }
+
+        /* 768px ->920px */
+        @media only screen and (min-width:768px) {
+            [class*='col-'] {
+                width: 50%;
+            }
+        }
+
+        /* 768px ->Up */
+        @media only screen and (min-width:992px) {
+            [class*='col-'] {
+                width: 25%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="col-3 nav">
+        Navbar1
+    </div>
+
+    <div class="col-3 nav1">
+        Navbar2
+    </div>
+
+    <div class="col-3 nav2">
+        Navbar3
+    </div>
+
+
+    <div class="col-3 nav3">
+        Navbar4
+    </div>
+
+
+
+</body>
+
+</html>

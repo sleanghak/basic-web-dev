@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changing HTML Elements</title>
+</head>
+
+<body>
+    <div>
+        <button class="chang">click me</button>
+        <!-- <button class="chang">click me</button>
+        <button class="chang">click me</button> -->
+    </div>
+    <script>
+        // console.log(document.getElementById('changs'));
+        console.log(document.getElementsByClassName('chang')[1]);
+        document.getElementsByClassName('chang')[0].innerHTML = 'Hello!';
+    </script>
+</body>
+
+</html>

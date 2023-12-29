@@ -1,0 +1,75 @@
+<!-- There are different ways to create a simple calculator with JavaScript and innerHTML. Here is an example using a basic
+HTML structure with input and button elements, and adding the functionality with JavaScript:
+ -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple Calculator</title>
+</head>
+
+<body>
+    <h1>Simple Calculator</h1>
+    <p>Type in two numbers and click on the operation to get the result:</p>
+
+    <input type="number" id="num1" placeholder="Number 1">
+    <input type="number" id="num2" placeholder="Number 2">
+
+    <br>
+
+    <button onclick="add()">+</button>
+    <button onclick="subtract()">-</button>
+    <button onclick="multiply()">x</button>
+    <button onclick="divide()">/</button>
+
+    <br><br>
+
+    <p id="result"></p>
+
+    <script>
+        function add() {
+            let num1 = Number(document.getElementById("num1").value);
+            let num2 = Number(document.getElementById("num2").value);
+            let result = num1 + num2;
+            document.getElementById("result").innerHTML = result;
+        }
+
+        function subtract() {
+            let num1 = Number(document.getElementById("num1").value);
+            let num2 = Number(document.getElementById("num2").value);
+            let result = num1 - num2;
+            document.getElementById("result").innerHTML = result;
+        }
+
+        function multiply() {
+            let num1 = Number(document.getElementById("num1").value);
+            let num2 = Number(document.getElementById("num2").value);
+            let result = num1 * num2;
+            document.getElementById("result").innerHTML = result;
+        }
+
+        function divide() {
+            let num1 = Number(document.getElementById("num1").value);
+            let num2 = Number(document.getElementById("num2").value);
+            let result = num1 / num2;
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</body>
+
+</html>
+<!-- 
+
+The HTML part creates an input for the first number, an input for the second number, four buttons for the operations,
+and a paragraph element with the id "result" to display the result.
+
+When a button is clicked, it calls a corresponding function in JavaScript that retrieves the numbers from the inputs,
+performs the calculation, and updates the "result" paragraph with the innerHTML property.
+
+For example, the add() function retrieves the values of num1 and num2, adds them, stores the result in a variable called
+result, and sets the innerHTML of the "result" paragraph to the value of result.
+
+Note that in all these functions, we use the Number() function to convert the values of the inputs to numbers, as the
+input type is set to "number". Also, since we use innerHTML to display the result, we could have added text and
+formatted it as needed. -->
